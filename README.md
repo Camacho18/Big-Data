@@ -4,7 +4,8 @@
 
 ### <center> Carrera: Ing. En Sistemas Computacionales.</center> <center> Materia: 	Datos Masivos (BDD-1704 IF9A	).</center>
 
-### <center> Maestro: Jose Christian Romero Hernandez	</center> <center> No. de control y nombre del alumno:</center> <center> 15211275 - Camacho Paniagua Luis Angel</center> 
+### <center> Maestro: Jose Christian Romero Hernandez	
+### </center> <center> No. de control y nombre del alumno:</center> <center> 15211275 - Camacho Paniagua Luis Angel</center> 
 ### </center> <center> No. de control y nombre del alumno:</center> <center> 16210585 - Valenzuela Rosales Marco Asael</center>
 
 
