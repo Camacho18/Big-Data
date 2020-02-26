@@ -32,38 +32,32 @@
 #### &nbsp;&nbsp;&nbsp;&nbsp; Code.
 ```    /* 1.Develop an algorithm in scala that calculates the radius of a circle
             var a=3
-     var r=math.sqrt(a/math.Pi)*/        
+     var r=math.sqrt(a/math.Pi)        
 ```        
 ```    /* 2. Develop an algorithm in scala that tells me if a number is a cousin
         var t = ((2,4,5),(1,2,3),(3.1416,23))
         t._3._1
-*/
 ``` 
 
 ```    /* 3. Given the variable bird = "tweet", use string interpolation to print "I am writing a tweet"n
         var bird="tweet"
         printf(s"Estoy ecribiendo un %s",bird)
-*/
 ``` 
 
 ```    /*4. Given the variable message = "Hi Luke, I'm your father!" use slilce to extract the  sequence "Luke"
         var mensaje = "Hola Luke yo soy tu padre!"
         mensaje.slice(5,9)
-*/
 ``` 
 
 ```    /* 5. What is the difference in value and a variable in scala?
        Value (val) is immutable once assigned the value this cannot be changed
        Variable (var) once assigned you can reassign the value, as long as the new value
        sea of the same type
-*/
 ``` 
 
 ```    /* 6. Given the tuple ((2,4,5), (1,2,3), (3,116,23))) the number 3,141 returns*/
        var t = ((2,4,5),(1,2,3),(3.1416,23))
        t._3._1
-
-*/
 ``` 
 
 ### &nbsp;&nbsp;Practice 2.
@@ -85,38 +79,38 @@
 ```        
 ```    /* 2.-Add 5 more items to "list" "green", "yellow", "blue", "orange", "pearl"
           lista += ("verde","amarillo", "azul", "naranja", "perla")
-*/
+
 ``` 
 
 ```    /* 3.-Bring the "list" "green", "yellow", "blue" items
              lista(3)
              lista(4)
              lista(5)
-*/
+
 ``` 
 
 ```    /* 4.-Create a number array in the 1-1000 range in 5-in-5 steps
                var v = Range(1,1000,5)
-*/
+
 ``` 
 
 ```    /*  5.-What are the unique elements of the List list (1,3,3,4,6,7,3,7) use conversion to sets
               var l = List(1,3,3,4,6,7,3,7)
                l.toSet
-*/
+
 ``` 
 
 ```    /* 6.-Create a mutable map called names containing the following"Jose", 20, "Luis", 24, "Ana", 23, "Susana", "27
           var map=collection.mutable.Map(("Jose", 20),("Luis", 24),("Ana", 23),("Susana", "27"))
-*/
+
 ``` 
 ```    /*6.-a. Print all map keys
            map.keys
-*/
+
 ``` 
 ```    /* 7.-b. Add the following value to the map ("Miguel", 23)
-           map += ("Miguel"->23)
-*/
+          map += ("Miguel"->23)
+
 ``` 
 
 ### &nbsp;&nbsp;Practice 3.
