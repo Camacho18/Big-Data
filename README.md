@@ -1,12 +1,12 @@
 # Big-Data  
 
-### <center>  TECNOLÓGICO NACIONAL DE MÉXICO</center> <center> INSTITUTO TECNOLÓGICO DE TIJUANA</center> <center> SUBDIRECCIÓN ACADÉMICA</center> <center> DEPARTAMENTO DE SISTEMAS Y COMPUTACIÓN</center><center> PERIODO: Enero - Junio 2020</center>
+### <p align="center" > TECNOLÓGICO NACIONAL DE MÉXICO INSTITUTO TECNOLÓGICO DE TIJUANA SUBDIRECCIÓN ACADÉMICA DEPARTAMENTO DE SISTEMAS Y COMPUTACIÓN PERIODO: Enero - Junio 2020 </p>
 
-### <center> Carrera: Ing. En Sistemas Computacionales.</center> <center> Materia: 	Datos Masivos (BDD-1704 IF9A	).</center>
+###  <p align="center">  Carrera: Ing. En Sistemas Computacionales. Materia: 	Datos Masivos (BDD-1704 IF9A	).</p>
 
-### <center> Maestro: Jose Christian Romero Hernandez	
-### </center> <center> No. de control y nombre del alumno:</center> <center> 15211275 - Camacho Paniagua Luis Angel</center> 
-### </center> <center> No. de control y nombre del alumno:</center> <center> 16210585 - Valenzuela Rosales Marco Asael</center>
+### <p align="center">  Maestro: Jose Christian Romero Hernandez	</p>
+### <p align="center">  No. de control y nombre del alumno: 15211275 - Camacho Paniagua Luis Angel </p>
+### <p align="center">  No. de control y nombre del alumno:16210585 - Valenzuela Rosales Marco Asael </p>
 
 
 # Unit 1
@@ -136,7 +136,7 @@
         3.- Iterative version.
         4.- Iterative version 2 variables.
         5.- Iterative vector version.
-        6.- Versión Divide y Vencerás.
+        6.- Divide and Conquer version.
 
 #### &nbsp;&nbsp;&nbsp;&nbsp; Code.
 
