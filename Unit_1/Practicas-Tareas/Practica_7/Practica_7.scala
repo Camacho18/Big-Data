@@ -49,3 +49,54 @@ df.select(grouping_id("Sales")).show()
 //def last(columnName: String, ignoreNulls: Boolean): Column
 //Aggregate function: returns the last value of the column in a group.
 df.select(last("Sales",1)).show()
+
+//11
+def min(columnName: String): Column
+df.select(min("Sales")).show()
+//12
+//Aggregate function: returns the minimum value of the column in a group.
+def min(e: Column): Column
+df.select(min("Sales")).show()
+//13
+
+//Aggregate function: returns the minimum value of the expression in a group.
+def stddev_pop(columnName: String): Column
+df.select(stddev_pop("Sales")).show()
+
+//14
+//Aggregate function: returns the population standard deviation of the expression in a group.
+def stddev_pop(e: Column): Column
+df.select(stddev_pop("Sales")).show()
+
+//15
+//Aggregate function: returns the population standard deviation of the expression in a group.
+def stddev_samp(columnName: String): Column
+df.select(stddev_samp("Sales")).show()
+
+//16
+//Aggregate function: returns the sample standard deviation of the expression in a group.
+def stddev_samp(e: Column): Column
+df.select(stddev_samp("Sales")).show()
+
+//17
+//Aggregate function: returns the sample standard deviation of the expression in a group.
+def sum(columnName: String): Column
+
+df.select(sum("Sales")).show()
+
+//18
+//Aggregate function: returns the sum of all values in the given column.
+def sum(e: Column): Column
+df.select(sum("Sales")).show()
+
+//19
+Aggregate function: returns the sum of all values in the expression.
+def var_samp(columnName: String): Column
+df.select( var_samp("Sales")).show()
+
+//20
+//Aggregate function: returns the unbiased variance of the values in a group.
+//def var_samp(e: Column): Column
+df.select( var_samp("Sales")).show()
+
+
