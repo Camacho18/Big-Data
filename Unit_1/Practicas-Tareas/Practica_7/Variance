@@ -1,0 +1,12 @@
+// Variance in statistics is a measurement of
+// the spread between numbers in a data set. 
+// That is, it measures how far each number in 
+// the set is from the mean and therefore from every other number in the set.
+
+def variance(columnName: String): Column
+Aggregate function: alias for var_samp
+
+def var_samp(columnName: String): Column
+Aggregate function: returns the unbiased variance of the values in a group.
+
+Receive a group of values ​​(column) and return the variance of that data set
