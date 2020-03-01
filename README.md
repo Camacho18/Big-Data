@@ -15,10 +15,10 @@
 &nbsp;&nbsp;&nbsp;[Practice 1](#practice-1)  
 &nbsp;&nbsp;&nbsp;[Practice 2](#practice-2)  
 &nbsp;&nbsp;&nbsp;[Practice 3](#practice-3)  
-&nbsp;&nbsp;&nbsp;[Practice 3](#practice-3)  
-&nbsp;&nbsp;&nbsp;[Practice 3](#practice-3)  
-&nbsp;&nbsp;&nbsp;[Practice 3](#practice-3)  
-&nbsp;&nbsp;&nbsp;[Practice 3](#practice-3)  
+&nbsp;&nbsp;&nbsp;[Practice 4](#practice-4)  
+&nbsp;&nbsp;&nbsp;[Practice 5](#practice-5)  
+&nbsp;&nbsp;&nbsp;[Practice 6](#practice-6)  
+&nbsp;&nbsp;&nbsp;[Practice 7](#practice-7)  
 &nbsp;&nbsp;&nbsp;[Exam](#Exam)
 
 
@@ -231,6 +231,185 @@
     }
 }
 ```
+### &nbsp;&nbsp;Practice 4.
+
+#### &nbsp;&nbsp;&nbsp;&nbsp; Instructions.
+
+### &nbsp;&nbsp;&nbsp;&nbsp; Code.
+
+```
+¿Cómo ese interpreta el coeficiente de correlación de Pearson?
+
+Su dimensión indica el nivel de asociación entre las variables.
+
+Cuando es menor a cero (r < 0) Se dice que hay correlación negativa: Las variables se correlacionan en un sentido inverso.
+A valores altos en una de las variables, le suelen corresponder valores bajos en la otra variable y viceversa. Cuánto el valor esté más próximo a -1 dicho coeficiente de correlación más evidente será la covariación extrema.
+
+Si r= -1 se habla de correlación negativa perfecta, la cual supone una determinación absoluta entre ambas variables, en sentido directo coexiste una relación lineal perfecta de pendiente negativa.
+
+Cuando es mayor a cero (r > 0) Se dice que hay correlación positiva: Ambas variables se correlacionan en un sentido directo.
+A valores altos en una de las variables, le corresponden valores altos en la otra variable e igualmente en una situación inversa sucede con los valores bajos. Cuánto más próximo a +1 se encuentre el coeficiente de correlación más evidente será la covariación.
+
+Si r = 1 Se habla de correlación positiva perfecta, la cual supone una determinación absoluta entre las variables, en sentido directo coexiste una relación lineal perfecta de pendiente positiva).
+
+Cuando es igual a cero (r = 0) Se dice que las variables están incorrectamente relacionadas, no puede es posible establecer algún sentido de covariación.
+No existe relación lineal, pero esto no implica necesariamente que las variables sean independientes, pudiendo existir relaciones no lineales entre las variables.
+
+Cuando las dos variables son independientes se dice que no están correlacionadas, aunque el resultado de reciprocidad no es necesariamente cierto.
+
+Para concluir se puede decir que se ve más difícil de lo que resulta ser, sobre todo si se cuenta con tecnología avanzada, pues hoy día existen múltiples programas que facilitan esta labor de cálculo e interpretación del coeficiente de Pearson.
+
+
+
+
+```
+
+### &nbsp;&nbsp;Practice 5.
+
+#### &nbsp;&nbsp;&nbsp;&nbsp; Instructions.
+
+### &nbsp;&nbsp;&nbsp;&nbsp; Code.
+```
+
+//10 functions
+//1
+df.select(first("Sales")).show()
+
+def first(columnName: String): Column
+Aggregate function: returns the first value of a column in a group.
+The function by default returns the first values it sees. It will return the first non-null
+value it sees when ignoreNulls is set to true. If all values are null, then null is returned.
+
+//2
+df.select(last("Sales")).show()
+
+def last(columnName: String): Column
+Aggregate function: returns the last value of the column in a group.
+The function by default returns the last values it sees. It will return the last non-null
+ value it sees when ignoreNulls is set to true. If all values are null, then null is returned.
+
+//3
+df.select(mean("Sales")).show()
+
+def mean(columnName: String): Column
+Aggregate function: returns the average of the values in a group. Alias for avg.
+
+//4
+df.select(var_pop("Sales")).show()
+
+def var_pop(columnName: String): Column
+Aggregate function: returns the population variance of the values in a group
+
+//5
+df.select(avg("Sales")).show()
+
+def avg(columnName: String): Column
+Aggregate function: returns the average of the values in a group.
+
+//6
+df.select(var_samp("Sales")).show()
+
+def var_samp(columnName: String): Column
+Aggregate function: returns the unbiased variance of the values in a group.
+
+//7
+df.select(approx_count_distinct("Sales")).show()
+
+def approx_count_distinct(columnName: String): Column
+Aggregate function: returns the approximate number of distinct items in a group.
+
+//8
+df.select(avg("Sales")).show()
+
+def avg(columnName: String): Column
+Aggregate function: returns the average of the values in a group.
+
+//9
+df.select(collect_list("Sales")).show()
+
+def collect_list(columnName: String): Column
+Aggregate function: returns a list of objects with duplicates.
+
+//10
+df.select(kurtosis("Sales")).show()
+
+def kurtosis(columnName: String): Column
+Aggregate function: returns the kurtosis of the values in a group.
+//11
+df.select(skewness("Sales")).show()
+
+def skewness(columnName: String): Column
+Aggregate function: returns the skewness of the values in a group. 
+
+//12
+df.select(stddev("Sales")).show()
+
+def stddev(columnName: String): Column
+Aggregate function: alias for stddev_samp. 
+
+//13
+df.select(approxCountDistinct("Sales")).show()
+
+def approxCountDistinct(columnName: String): Column 
+
+//14
+df.select(count("Sales")).show()
+
+def corr(column1: Column, column2: Column): Column
+Aggregate function: returns the Pearson Correlation Coefficient for two columns.
+
+//15
+df.select(max("Sales")).show()
+
+def max(columnName: String): Column
+Aggregate function: returns the maximum value of the column in a group. 
+
+//16
+df.select(corr("Sales","Sales")).show()
+
+//17
+df.select(covar_pop("Sales","Sales")).show()
+
+//18
+df.select(covar_samp("Sales","Sales")).show()
+
+//19
+df.select(approx_count_distinct("Company")).show()
+
+
+//20
+df.select(mean("Sales")).show()
+
+```
+
+
+### &nbsp;&nbsp;Practice 6.
+
+#### &nbsp;&nbsp;&nbsp;&nbsp; Instructions.
+
+### &nbsp;&nbsp;&nbsp;&nbsp; Code.
+
+```
+
+
+
+
+```
+
+
+### &nbsp;&nbsp;Practice 7.
+
+#### &nbsp;&nbsp;&nbsp;&nbsp; Instructions.
+
+
+### &nbsp;&nbsp;&nbsp;&nbsp; Code.
+```
+
+
+
+
+```
+
 
 ## &nbsp;&nbsp;Exam.
 
