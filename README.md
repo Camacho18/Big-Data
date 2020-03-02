@@ -272,6 +272,7 @@ Para concluir se puede decir que se ve más difícil de lo que resulta ser, sobr
 ```
 
 //10 functions
+```scala   
 //1
 df.select(first("Sales")).show()
 
@@ -279,7 +280,8 @@ def first(columnName: String): Column
 Aggregate function: returns the first value of a column in a group.
 The function by default returns the first values it sees. It will return the first non-null
 value it sees when ignoreNulls is set to true. If all values are null, then null is returned.
-
+``` 
+``` scala
 //2
 df.select(last("Sales")).show()
 
@@ -287,96 +289,115 @@ def last(columnName: String): Column
 Aggregate function: returns the last value of the column in a group.
 The function by default returns the last values it sees. It will return the last non-null
  value it sees when ignoreNulls is set to true. If all values are null, then null is returned.
-
+``` 
+```scala
 //3
 df.select(mean("Sales")).show()
 
 def mean(columnName: String): Column
 Aggregate function: returns the average of the values in a group. Alias for avg.
-
+``` 
+``` scala
 //4
 df.select(var_pop("Sales")).show()
 
 def var_pop(columnName: String): Column
 Aggregate function: returns the population variance of the values in a group
-
+``` 
+```scala
 //5
 df.select(avg("Sales")).show()
 
 def avg(columnName: String): Column
 Aggregate function: returns the average of the values in a group.
-
+``` 
+``` scala
 //6
 df.select(var_samp("Sales")).show()
 
 def var_samp(columnName: String): Column
 Aggregate function: returns the unbiased variance of the values in a group.
-
+``` 
+```scala
 //7
 df.select(approx_count_distinct("Sales")).show()
 
 def approx_count_distinct(columnName: String): Column
 Aggregate function: returns the approximate number of distinct items in a group.
-
+``` 
+```scala
 //8
 df.select(avg("Sales")).show()
 
 def avg(columnName: String): Column
 Aggregate function: returns the average of the values in a group.
-
+``` 
+```scala
 //9
 df.select(collect_list("Sales")).show()
 
 def collect_list(columnName: String): Column
 Aggregate function: returns a list of objects with duplicates.
-
+``` 
+```scala
 //10
 df.select(kurtosis("Sales")).show()
 
 def kurtosis(columnName: String): Column
 Aggregate function: returns the kurtosis of the values in a group.
+``` 
+```scala
 //11
 df.select(skewness("Sales")).show()
 
 def skewness(columnName: String): Column
 Aggregate function: returns the skewness of the values in a group. 
-
+``` 
+```scala
 //12
 df.select(stddev("Sales")).show()
 
 def stddev(columnName: String): Column
 Aggregate function: alias for stddev_samp. 
-
+``` 
+```scala
 //13
 df.select(approxCountDistinct("Sales")).show()
 
 def approxCountDistinct(columnName: String): Column 
-
+``` 
+```scala
 //14
 df.select(count("Sales")).show()
 
 def corr(column1: Column, column2: Column): Column
 Aggregate function: returns the Pearson Correlation Coefficient for two columns.
-
+``` 
+```scala
 //15
 df.select(max("Sales")).show()
 
 def max(columnName: String): Column
 Aggregate function: returns the maximum value of the column in a group. 
-
+``` 
+```scala
 //16
 df.select(corr("Sales","Sales")).show()
+```
+```scala
 
 //17
 df.select(covar_pop("Sales","Sales")).show()
-
+```
+```scala
 //18
 df.select(covar_samp("Sales","Sales")).show()
-
+```
+```scala
 //19
 df.select(approx_count_distinct("Company")).show()
-
-
+```
+```scala
 //20
 df.select(mean("Sales")).show()
 
@@ -389,13 +410,138 @@ df.select(mean("Sales")).show()
 
 ### &nbsp;&nbsp;&nbsp;&nbsp; Code.
 
+
+//10 functions
+```scala   
+//1
+df.select(first("Price")).show()
+
+def first(columnName: String): Column
+Aggregate function: returns the first value of a column in a group.
+The function by default returns the first values it sees. It will return the first non-null
+value it sees when ignoreNulls is set to true. If all values are null, then null is returned.
+``` 
+```scala
+//2
+df.select(last("Price")).show()
+
+def last(columnName: String): Column
+Aggregate function: returns the last value of the column in a group.
+The function by default returns the last values it sees. It will return the last non-null
+ value it sees when ignoreNulls is set to true. If all values are null, then null is returned.
+``` 
+```scala
+//3
+df.select(mean("Price")).show()
+
+def mean(columnName: String): Column
+Aggregate function: returns the average of the values in a group. Alias for avg.
+``` 
+``` scala
+//4
+df.select(var_pop("Price")).show()
+
+def var_pop(columnName: String): Column
+Aggregate function: returns the population variance of the values in a group
+``` 
+```scala
+//5
+df.select(avg("Price")).show()
+
+def avg(columnName: String): Column
+Aggregate function: returns the average of the values in a group.
+``` 
+``` scala
+//6
+df.select(var_samp("Price")).show()
+
+def var_samp(columnName: String): Column
+Aggregate function: returns the unbiased variance of the values in a group.
+``` 
+```scala
+//7
+df.select(approx_count_distinct("Price")).show()
+
+def approx_count_distinct(columnName: String): Column
+Aggregate function: returns the approximate number of distinct items in a group.
+``` 
+```scala
+//8
+df.select(avg("Price")).show()
+
+def avg(columnName: String): Column
+Aggregate function: returns the average of the values in a group.
+``` 
+```scala
+//9
+df.select(collect_list("Price")).show()
+
+def collect_list(columnName: String): Column
+Aggregate function: returns a list of objects with duplicates.
+``` 
+```scala
+//10
+df.select(kurtosis("Price")).show()
+
+def kurtosis(columnName: String): Column
+Aggregate function: returns the kurtosis of the values in a group.
+``` 
+```scala
+//11
+df.select(skewness("Price")).show()
+
+def skewness(columnName: String): Column
+Aggregate function: returns the skewness of the values in a group. 
+``` 
+```scala
+//12
+df.select(stddev("Price")).show()
+
+def stddev(columnName: String): Column
+Aggregate function: alias for stddev_samp. 
+``` 
+```scala
+//13
+df.select(approxCountDistinct("Price")).show()
+
+def approxCountDistinct(columnName: String): Column 
+``` 
+```scala
+//14
+df.select(count("Price")).show()
+
+def corr(column1: Column, column2: Column): Column
+Aggregate function: returns the Pearson Correlation Coefficient for two columns.
+``` 
+```scala
+//15
+df.select(max("Price")).show()
+
+def max(columnName: String): Column
+Aggregate function: returns the maximum value of the column in a group. 
+``` 
+```scala
+//16
+df.select(corr("Price","Price")).show()
 ```
+```scala
 
-
-
+//17
+df.select(covar_pop("Price","Price")).show()
+```
+```scala
+//18
+df.select(covar_samp("SPrice","Price")).show()
+```
+```scala
+//19
+df.select(approx_count_distinct("Price")).show()
+```
+```scala
+//20
+df.select(mean("Price")).show()
 
 ```
-
 
 ### &nbsp;&nbsp;Practice 7.
 
