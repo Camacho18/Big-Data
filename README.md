@@ -33,6 +33,9 @@
         5.-What is the difference in value and a variable in scala?
         6.-Given the tuple ((2,4,5), (1,2,3), (3,116,23))) the number 3,141 returns
         
+        
+#### In this practice, what we did was the connotation of marios methods, mathematical to get the radius of a circle, how to print from an interpolation, using a slilce to extract the sequence of a text   
+
 #### &nbsp;&nbsp;&nbsp;&nbsp; Code.
 ```scala   
       /*1.Develop an algorithm in scala that calculates the radius of a circle*/
@@ -82,6 +85,8 @@
         6.-Create a mutable map called names containing the following"Jose", 20, "Luis", 24, "Ana", 23, "Susana", "27"
         6.-a. Print all map keys
         7.-b. Add the following value to the map ("Miguel", 23)
+        
+#### In this practice what we did we created lists with different colors, we added elements to the lists, we created an array with ranges and that they count from 5 to 5, we made a mutable map, we printed them and we added element to that map
         
 #### &nbsp;&nbsp;&nbsp;&nbsp; Code.
 ```scala
@@ -141,6 +146,7 @@
         4.- Iterative version 2 variables.
         5.- Iterative vector version.
         6.- Divide and Conquer version.
+#### In this practice what we did is fibonacci their different ways of doing them in their 6 ways using cycles to give us the 6
 
 #### &nbsp;&nbsp;&nbsp;&nbsp; Code.
 
@@ -235,38 +241,47 @@
 
 #### &nbsp;&nbsp;&nbsp;&nbsp; Instructions.
 
-### &nbsp;&nbsp;&nbsp;&nbsp; Code.
+#### This task is from Pearson's correlation, where we investigate what it is and how it is interpreted
+
+### &nbsp;&nbsp;&nbsp;&nbsp; Investigation
 
 ```
-¿Cómo ese interpreta el coeficiente de correlación de Pearson?
+The Pearson Correlation Coefficient is a measure of the correspondence or linear relationship between two random quantitative variables. In simpler words it can be defined as an index used to measure the degree of relationship that two variables have, both quantitative.
 
-Su dimensión indica el nivel de asociación entre las variables.
+Having two variables, the correlation facilitates estimates of the value of one of them, with knowledge of the value of the other variable.
 
-Cuando es menor a cero (r < 0) Se dice que hay correlación negativa: Las variables se correlacionan en un sentido inverso.
-A valores altos en una de las variables, le suelen corresponder valores bajos en la otra variable y viceversa. Cuánto el valor esté más próximo a -1 dicho coeficiente de correlación más evidente será la covariación extrema.
+This coefficient is a measure that indicates the relative situation of the events with respect to the two variables, that is, it represents the numerical expression that indicates the degree of correspondence or relationship that exists between the 2 variables. These numbers vary between limits of +1 and -1.
 
-Si r= -1 se habla de correlación negativa perfecta, la cual supone una determinación absoluta entre ambas variables, en sentido directo coexiste una relación lineal perfecta de pendiente negativa.
+The basis of the Pearson coefficient is as follows: The more intense the concordance (in direct or inverse sense) of the relative positions of the data in the two variables, the product of the numerator takes on greater value (in absolute sense). If the match is exact, the numerator is equal to N (or a -N), and the index takes a value equal to 1 (or -1).
 
-Cuando es mayor a cero (r > 0) Se dice que hay correlación positiva: Ambas variables se correlacionan en un sentido directo.
-A valores altos en una de las variables, le corresponden valores altos en la otra variable e igualmente en una situación inversa sucede con los valores bajos. Cuánto más próximo a +1 se encuentre el coeficiente de correlación más evidente será la covariación.
+How does that interpret Pearson's correlation coefficient?
 
-Si r = 1 Se habla de correlación positiva perfecta, la cual supone una determinación absoluta entre las variables, en sentido directo coexiste una relación lineal perfecta de pendiente positiva).
+Its dimension indicates the level of association between the variables.
 
-Cuando es igual a cero (r = 0) Se dice que las variables están incorrectamente relacionadas, no puede es posible establecer algún sentido de covariación.
-No existe relación lineal, pero esto no implica necesariamente que las variables sean independientes, pudiendo existir relaciones no lineales entre las variables.
+When it is less than zero (r <0) It is said that there is a negative correlation: The variables are correlated in an inverse sense.
+At high values ​​in one of the variables, low values ​​usually correspond to the other variable and vice versa. How much the value is closer to -1 said more obvious correlation coefficient will be extreme covariation.
 
-Cuando las dos variables son independientes se dice que no están correlacionadas, aunque el resultado de reciprocidad no es necesariamente cierto.
+If r = -1 there is talk of a perfect negative correlation, which implies an absolute determination between both variables, in a direct sense a perfect linear relationship of negative slope coexists.
 
-Para concluir se puede decir que se ve más difícil de lo que resulta ser, sobre todo si se cuenta con tecnología avanzada, pues hoy día existen múltiples programas que facilitan esta labor de cálculo e interpretación del coeficiente de Pearson.
+When it is greater than zero (r> 0) It is said that there is a positive correlation: Both variables are correlated in a direct sense.
+High values ​​in one of the variables correspond to high values ​​in the other variable and also in an inverse situation with low values. The closer to +1 the correlation coefficient is found, the more evident the covariation will be.
 
+If r = 1 There is talk of a perfect positive correlation, which implies an absolute determination between the variables, in a direct sense a perfect linear relationship of positive slope coexists).
 
+When it is equal to zero (r = 0) It is said that the variables are incorrectly related, it is not possible to establish some sense of covariation.
+There is no linear relationship, but this does not necessarily imply that the variables are independent, and there may be non-linear relationships between the variables.
 
+When the two variables are independent it is said that they are not correlated, although the result of reciprocity is not necessarily true.
+
+To conclude it can be said that it looks more difficult than it turns out to be, especially if there is advanced technology, because today there are multiple programs that facilitate this work of calculating and interpreting the Pearson coefficient.
 
 ```
 
 ### &nbsp;&nbsp;Practice 5.
 
 #### &nbsp;&nbsp;&nbsp;&nbsp; Instructions.
+
+#### In this practice it was to investigate so that the functions of aggregation work, and to apply them and of which we had already seen to take out 20 more functions and to apply them in a defined cvs
 
 ### &nbsp;&nbsp;&nbsp;&nbsp; Code.
 ```
@@ -408,6 +423,8 @@ df.select(mean("Sales")).show()
 
 #### &nbsp;&nbsp;&nbsp;&nbsp; Instructions.
 
+#### In this practice it was to apply the functions of aggregation, to apply them in another cvs in this era we lady information on diamonds
+
 ### &nbsp;&nbsp;&nbsp;&nbsp; Code.
 
 
@@ -547,7 +564,7 @@ df.select(mean("Price")).show()
 
 #### &nbsp;&nbsp;&nbsp;&nbsp; Instructions.
 
-
+#### In this practice we investigate how the variance function works and we see what parameters it receives and we apply another 20 functions
 ### &nbsp;&nbsp;&nbsp;&nbsp; Code.
 ```scala
 // 1
