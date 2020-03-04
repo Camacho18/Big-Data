@@ -19,7 +19,7 @@
 &nbsp;&nbsp;&nbsp;[Practice 5](#practice-5)  
 &nbsp;&nbsp;&nbsp;[Practice 6](#practice-6)  
 &nbsp;&nbsp;&nbsp;[Homework 2](#Homework-2)  
-&nbsp;&nbsp;&nbsp;[Exam 1](#Exam-1)
+&nbsp;&nbsp;&nbsp;[Exam 1](#Exam-1)     
 &nbsp;&nbsp;&nbsp;[Exam 2](#Exam-2)
 
 
