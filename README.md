@@ -150,8 +150,9 @@
 
 #### &nbsp;&nbsp;&nbsp;&nbsp; Code.
 
-
+       
 ```scala
+      /*Recursively, he will be calling his previous two. Each of these calls, if it is greater than 1, will again be calling your previous    two.*/
     /* 1.- Recursive version descending.*/
     def fib1( n : Int) : Int =
     {
@@ -160,6 +161,8 @@
     }
 ```
 ```scala
+
+A formal series of powers where each coefficient is an element of succession. Fibonacci numbers have the generating function
     /* 2.- Version with explicit formula.*/
     def fib2( n : Int ) : Int = {
         if(n<2)n
