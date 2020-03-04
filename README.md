@@ -237,7 +237,7 @@
     }
 }
 ```
-### &nbsp;&nbsp;Homework 1 .
+### &nbsp;&nbsp;Homework 1.
 
 #### &nbsp;&nbsp;&nbsp;&nbsp; Instructions.
 
