@@ -15,10 +15,10 @@
 &nbsp;&nbsp;&nbsp;[Practice 1](#practice-1)  
 &nbsp;&nbsp;&nbsp;[Practice 2](#practice-2)  
 &nbsp;&nbsp;&nbsp;[Practice 3](#practice-3)  
-&nbsp;&nbsp;&nbsp;[Practice 4](#practice-4)  
+&nbsp;&nbsp;&nbsp;[Homework 1](#Homework-1)  
 &nbsp;&nbsp;&nbsp;[Practice 5](#practice-5)  
 &nbsp;&nbsp;&nbsp;[Practice 6](#practice-6)  
-&nbsp;&nbsp;&nbsp;[Practice 7](#practice-7)  
+&nbsp;&nbsp;&nbsp;[Homework 2](#Homework-2)  
 &nbsp;&nbsp;&nbsp;[Exam](#Exam)
 
 
@@ -237,7 +237,7 @@
     }
 }
 ```
-### &nbsp;&nbsp;Practice 4.
+### &nbsp;&nbsp;Homework 1 .
 
 #### &nbsp;&nbsp;&nbsp;&nbsp; Instructions.
 
@@ -560,7 +560,7 @@ df.select(mean("Price")).show()
 
 ```
 
-### &nbsp;&nbsp;Practice 7.
+### &nbsp;&nbsp;Homework 2.
 
 #### &nbsp;&nbsp;&nbsp;&nbsp; Instructions.
 
