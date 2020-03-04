@@ -19,7 +19,8 @@
 &nbsp;&nbsp;&nbsp;[Practice 5](#practice-5)  
 &nbsp;&nbsp;&nbsp;[Practice 6](#practice-6)  
 &nbsp;&nbsp;&nbsp;[Homework 2](#Homework-2)  
-&nbsp;&nbsp;&nbsp;[Exam](#Exam)
+&nbsp;&nbsp;&nbsp;[Exam 1](#Exam-1)
+&nbsp;&nbsp;&nbsp;[Exam 2](#Exam-2)
 
 
 ### &nbsp;&nbsp;Practice 1.
@@ -698,7 +699,7 @@ df.select( var_samp("Sales")).show()
 
 
 
-## &nbsp;&nbsp;Exam.
+## &nbsp;&nbsp;Exam 1.
 
 ### &nbsp;&nbsp;&nbsp;&nbsp; Instructions.
 
@@ -713,6 +714,8 @@ df.select( var_samp("Sales")).show()
         Absolute Address = | 4 - 19 | = 15
         
     Develop a function called diagonalDifference in a scrip with the Scala programming language. It must return an integer that represents the difference of the absolute diagonal.
+    
+### Declaring a method called diagonalDifference that receives a square matrix, which makes the sum of its diagonals and obtains the absolute value of the subtraction of them for this first obtains the size of the matrix and declares two variables where the sum of each one of the diagonals by means of two cycles for and two if, if the values ​​of the two for are equal the sum, for the second if it adds the values ​​of the variables of the cycles for and compares it with the size of the matrix minus 1, if the sum is equal, when leaving the cycles for subtraction and take the absolute value of it.
 ### &nbsp;&nbsp;&nbsp;&nbsp; Code.
 
 
@@ -737,4 +740,90 @@ df.select( var_samp("Sales")).show()
         math.abs(suma1-suma2)
 }
 ```
+## &nbsp;&nbsp;Exam 2.
+
+### &nbsp;&nbsp;&nbsp;&nbsp; Instructions.
+
+     1.Start a spark session
+     2.Load the Netflix Stock CSV file, make spark infer the data types
+     3. What are the names of the columns?
+     4.How is the scheme?
+     5.Print the first 5 columns
+     6.Use Describe () to learn about the DataFrame
+     7.Create a new dataframe with a new column called HV RATIO which is the relationship between the price of the "High" column versus      the "Volume" column of shares traded for one day.
+     8. Which day had the highest peak in the "Close" column?
+     9. What is the meaning of the "Close" column?
+     10. What is the maximum and minimum of the "Volume" column?
+    11.With Scala / Spark $ syntax Answer the following:
+      a. How many days was the "Close" column less than $ 600?
+      b.What percentage of the time was the "High" column greater than $ 500?
+      c.What is Pearson's correlation between column "High" and column "Volume"?
+      d.What is the maximum of the "High" column per year?
+      e.What is the average of the "Close" column for each calendar month?
+      
+### In this DataFrames exam we made the connection of a spark session, then we loaded the file that we were asked for, we made several Data Frames to be able to get what we were asked for, we were asked to show columns, show the scheme and we had to create a new data frame and add it to the previously loaded file, we show the maximum and minimum of the Volume column, we take out the percentage of the High column on the highest day, we use the Pearson correlation and apply it between the High and Volume columns, we take the average by month of each year and the maximum of the High column per Year
+
+### &nbsp;&nbsp;&nbsp;&nbsp; Code.
+```scala
+// 1.
+import org.apache.spark.sql.SparkSession
+
+val spark = SparkSession.builder().getOrCreate()
+
+// 2.
+val df = spark.read.option("header", "true").option("inferSchema","true")csv("Netflix_2011_2016")
+
+// 3. 
+df.columns
+
+// 4.
+df.printSchema()
+
+// 5. 
+df.head(5)
+
+// 6. 
+df.describe().show()
+
+// 7.
+val NewDT = df.withColumn("HV Ratio", df("High")+df("Volume"))
+NewDT.show()
+
+// 8.
+import spark.implicits._
+var m: Double = df.filter(max("High"))
+df.filter($"High" === max("High")).show()
+
+ df.groupBy(month(df("Date")).alias("Month")).max("High").sortWith(asc("High")).show()
+
+
+// 9.
+// 
+
+// 10. 
+ df.select(max("Volume")).show()
+ df.select(min("Volume")).show()
+
+// 11. 
+ 
+// A.
+df.filter($"Close" < 600).count()
+
+// B.
+var CHigh = df.filter($"High" > 500).count()
+var count = df.count()
+var p: Double = (100*CHigh)/count
+
+// C.
+df.select(corr("High","Volume")).show()
+
+
+// D. 
+ df.groupBy(year(df("Date"))).max().show()
+
+// E.
+ df.groupBy(month(df("Date")).alias("Month")).avg("Close").sort(asc("Month")).show()
+```
+
+
         
