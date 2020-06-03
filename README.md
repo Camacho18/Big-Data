@@ -720,9 +720,7 @@ Factory methods for org.apache.spark.ml.linalg.Vector. We don't use the name Vec
 Pipeline and Confusion Matrix
 ### &nbsp;&nbsp;&nbsp;&nbsp; Investigation
 
-```
-
-                   
+```                   
 Main concepts in Pipelines
 MLlib standardizes APIs for machine learning algorithms to make it easier to combine multiple algorithms into a single pipeline, or workflow. This section covers the key concepts introduced by the Pipelines API, where the pipeline concept is mostly inspired by the scikit-learn project.
 DataFrame:     This ML API uses DataFrame from Spark     SQL as an ML dataset, which can hold a variety of data types. E.g.,     a DataFrame could have different     columns storing text, feature vectors, true labels, and predictions.
@@ -794,4 +792,98 @@ For example, in a binary model that seeks to predict whether a mushroom is poiso
 
 In this way, the main diagonal contains the sum of all the correct predictions (the model says "S" and it is correct, it is poisonous, or it says "N" and it is correct, it is edible). The other diagonal reflects classifier errors: false positives or “true positives” (says that it is poisonous “S”, but in reality it is not “n”), or false negatives or “false negatives” (says that it is edible "N", but actually poisonous "p").
 However, when the different “classes” are very unbalanced, this way of classifying the “goodness” of the operation of a classifier is of little use. For example, if the churn rate is 10% per month (that is, 10 people out of 100 unsubscribe per month), and we consider the customer who unsubscribes as a class "Positive", the expected positive: negative ratio would be 1: 9. So if we directly assigned all the clients the negative class (= no churn), we would be achieving a base precision of 90%, but… it would be useless.
+```
 
+### &nbsp;&nbsp;Exam 1.
+
+#### &nbsp;&nbsp;&nbsp;&nbsp; Instructions.
+                   
+Develop the following instructions in Spark with the Scala programming language,
+using only documentation from Spark's Machine Learning Mllib library and
+Google
+
+1. From the Iris.csv dataset found at https://github.com/jcromerohdz/iris, elaborate
+the cleanliness of data necessary to be processed by the following algorithm
+(Important, this cleaning must be by means of Scala script in Spark).
+to. Use Spark's Mllib library the Machine Learning algorithm called
+multilayer perceptron
+2. What are the column names?
+3. How is the scheme?
+4. Print the first 5 columns.
+5. Use the describe () method to learn more about the DataFrame data.
+6. Make the relevant transformation for the categorical data which will be
+our labels to classify.
+7. Build the classification models and explain your architecture.
+8. Print the model results
+
+### &nbsp;&nbsp;&nbsp;&nbsp; Code
+```scala
+
+// We import the necessary libraries
+import org.apache.spark.ml.classification.MultilayerPerceptronClassifier
+import org.apache.spark.ml.evaluation.MulticlassClassificationEvaluator
+import org.apache.spark.ml.feature.VectorAssembler
+import org.apache.spark.ml.feature.{VectorAssembler, StringIndexer}
+import org.apache.spark.ml.linalg.Vectors
+
+// The dataFrame is loaded from a csv
+val data  = spark.read.option("header","true").option("inferSchema", "true").format("csv").load("iris.csv")
+
+//2.
+//Columns
+data.columns()
+
+//3.
+// The schema of the dataFrame data is printed
+data.printSchema()
+
+// null fields are removed
+val dataClean = data.na.drop()
+
+//4.
+// We see the first 5 data and observe that the DataFrame does not have adequate headers
+data.show(5)
+
+//5.
+data.describe().show()
+
+// A vector is generated that contains the characteristics to be evaluated
+// and are saved in the features column
+val vectorFeatures = (new VectorAssembler().setInputCols(Array("sepal_length","sepal_width", "petal_length","petal_width")).setOutputCol("features"))
+
+// The features are transformed using the dataframe
+val features = vectorFeatures.transform(dataClean)
+
+// Transform categorical data from species to numerical data with the label column
+val speciesIndexer = new StringIndexer().setInputCol("species").setOutputCol("label")
+
+// We adjust the indexed species with the vector features
+val dataIndexed = speciesIndexer.fit(features).transform(features)
+
+// Separate training data and testing data using indexed data
+val splits = dataIndexed.randomSplit(Array(0.6, 0.4), seed = 1234L)
+val train = splits(0)
+val test = splits(1)
+
+// Set the layer settings for the model
+val layers = Array[Int](4, 5, 4, 3)
+
+// The Multilayer algorithm trainer is configured
+val trainer = new MultilayerPerceptronClassifier().setLayers(layers).setBlockSize(128).setSeed(1234L).setMaxIter(100)
+
+// Train the model using the training data
+val model = trainer.fit(train)
+
+// Run the model with the test data
+val result = model.transform(test)
+
+// The prediction and the label are selected
+val predictionAndLabels = result.select("prediction", "label")
+
+// Estimate model precision
+val evaluator = new MulticlassClassificationEvaluator().setMetricName("accuracy")
+
+// The result of the precision is printed
+println(s"Test set accuracy = ${evaluator.evaluate(predictionAndLabels)}")
+
+```
