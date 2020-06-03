@@ -10,7 +10,7 @@ SUPERVISED LEARNING
 
 From a business decision-making point of view, a decision tree is the minimum number of yes / no questions that one has to ask, to assess the probability of making a correct decision, most of the time. This method allows you to approach the problem in a structured and systematic way to reach a logical conclusion.
 
-
+Class Session![BigData]https://github.com/Camacho18/Big-Data/blob/Unit_2/HomeWorks/1%20arbol.png
 
 
 2. Naïve Bayes Classification: Naïve Bayes classifiers are a family of simple probabilistic classifiers based on the application of Bayes ‘theorem with strong (Naïve) assumptions of independence between characteristics’. The featured image is the equation - with P (A | B) being posterior probability, P (B | A) being probability, P (A) being class prior probability, and P (B) being prior probability predictor.
@@ -18,22 +18,17 @@ From a business decision-making point of view, a decision tree is the minimum nu
 
 3. Ordinary Least Squares Regression: If you've been in contact with statistics, you've probably heard of linear regression before. Ordinary Least Squares Regression is a method of performing linear regression. Linear regression can be thought of as the task of fitting a straight line through a set of points. There are several possible strategies for doing this, and the "ordinary least squares" strategy goes like this: you can draw a line and then, for each of the data points, measure the vertical distance between the point and the line and add them together; The fitted line would be the one in which this sum of distances is as small as possible.
 
+Class Session![BigData]https://github.com/Camacho18/Big-Data/blob/Unit_2/HomeWorks/3%20ordinary.png
 
 4. Logistic Regression: Logistic regression is a powerful statistical way to model a binomial result with one or more explanatory variables. Measure the relationship between the categorical dependent variable and one or more independent variables by estimating the probabilities using a logistic function, which is the cumulative logistic distribution.
 
-
-
-
-
-
-
-
-
-
+Class Session![BigData]https://github.com/Camacho18/Big-Data/blob/Unit_2/HomeWorks/4.png
 
 
 
 5. Support Vector Machines: SVM is a binary classification algorithm. Given a set of points of 2 types at the N-dimensional location, SVM generates a dimensional (N-1) hyperlane to separate those points into 2 groups. Let's say you have some points of 2 types on a piece of paper that are linearly separable. SVM will find a straight line separating those points into 2 types and located as far as possible from all those points.
+
+Class Session![BigData]https://github.com/Camacho18/Big-Data/blob/Unit_2/HomeWorks/5%20support.png
 
 6. Métodos Ensemble: Ensemble methods are learning algorithms that build a set of classifiers and then classify new data points by taking a weighted vote of their predictions. The original set method is Bayesian averaging, but the latest algorithms include encoding output correction error.
 
@@ -47,14 +42,7 @@ UNSUPERVISED LEARNING
 8. Principal Component Analysis: PCA is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables into a set of linearly uncorrelated variable values ​​called principal components.
 
 
-
-
-
-
-
-
-
-
+Class Session![BigData]https://github.com/Camacho18/Big-Data/blob/Unit_2/HomeWorks/8%20Analysis.png
 
 Principal component analysis
 
@@ -63,6 +51,7 @@ Some of the PCA applications include compression, data simplification for easier
  
 9. Singular Value Decomposition: In linear algebra, SVD is a factorization of a real complex matrix. For a given M * n matrix, there is a decomposition such that M = UΣV, where U and V are unit matrices and Σ is a diagonal matrix.
 
+Class Session![BigData]https://github.com/Camacho18/Big-Data/blob/Unit_2/HomeWorks/9%20Singular.png
 
 10. Independent Component Analysis: ICA is a statistical technique to reveal the hidden factors underlying sets of variables, measurements or random signals. ICA defines a generative model for the observed multivariate data, which is usually given as a large sample database. In the model, the data variables are assumed to be linear mixtures of some unknown latent variables, and the mixing system is also unknown. Latent variables are assumed to be non-Gaussian and mutually independent, and are called independent components of the observed data.
 
