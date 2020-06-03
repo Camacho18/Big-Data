@@ -10,8 +10,8 @@ SUPERVISED LEARNING
 
 From a business decision-making point of view, a decision tree is the minimum number of yes / no questions that one has to ask, to assess the probability of making a correct decision, most of the time. This method allows you to approach the problem in a structured and systematic way to reach a logical conclusion.
 
-Class Session![BigData]https://github.com/Camacho18/Big-Data/blob/Unit_2/HomeWorks/1%20arbol.png
 
+Class Session ![Big Data]https://github.com/Camacho18/Big-Data/blob/Unit_2/HomeWorks/1%20arbol.png
 
 2. Naïve Bayes Classification: Naïve Bayes classifiers are a family of simple probabilistic classifiers based on the application of Bayes ‘theorem with strong (Naïve) assumptions of independence between characteristics’. The featured image is the equation - with P (A | B) being posterior probability, P (B | A) being probability, P (A) being class prior probability, and P (B) being prior probability predictor.
 
