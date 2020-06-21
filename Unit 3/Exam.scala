@@ -1,16 +1,3 @@
-# Big-Data
-
-### <p align="center" > TECNOLÓGICO NACIONAL DE MÉXICO <br> INSTITUTO TECNOLÓGICO DE TIJUANA <br> SUBDIRECCIÓN ACADÉMICA <br>DEPARTAMENTO DE SISTEMAS Y COMPUTACIÓN <br>PERIODO: Enero - Junio 2020 </p>
-
-###  <p align="center">  Carrera: Ing. En Sistemas Computacionales. <br>Materia:     Datos Masivos (BDD-1704 IF9A    ).</p>
-### <p align="center">  Maestro: Jose Christian Romero Hernandez    </p>
-### <p align="center">  No. de control y nombre del alumno: <br> 15211275 - Camacho Paniagua Luis Angel <br> 16210585 - Valenzuela Rosales Marco Asael </p>
-
-# Unit 3
-
-## Exam
-
-```scala
 //Importar una simple sesión Spark.
 //Importar Vector Assembler y Vector
 import org.apache.spark.sql.SparkSession
@@ -87,4 +74,3 @@ println(s"Within set sum of Squared Errors = $WSSE")
 // Imprimimos los clusters
 println("Cluster Centers: ")
 model.clusterCenters.foreach(println)
-```
