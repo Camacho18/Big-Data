@@ -6,7 +6,7 @@
 ### <p align="center">  Maestro: Jose Christian Romero Hernandez    </p>
 ### <p align="center">  No. de control y nombre del alumno: <br> 15211275 - Camacho Paniagua Luis Angel <br> 16210585 - Valenzuela Rosales Marco Asael </p>
 
-# Unit 2
+# Unit 3
 
 ## Exam
 
