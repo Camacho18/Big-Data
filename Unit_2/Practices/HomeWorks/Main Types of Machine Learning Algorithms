@@ -1,0 +1,62 @@
+Machine Learning came a long way from a science fiction fancy to a reliable and diverse business tool that amplifies multiple elements of the business operation.
+Its influence on business performance may be so significant that the implementation of machine learning algorithms is required to maintain competitiveness in many fields and industries.
+The implementation of machine learning into business operations is a strategic step and requires a lot of resources. Therefore, it's important to understand what do you want the ML to do for your particular business and what kind of perks different types of ML algorithms bring to the table. 
+
+Machine learning algorithms can divide into three broad categories: supervised learning, unsupervised learning, and reinforcement learning. Supervised learning is useful in cases where a property (label) is available for a specific set of data, but must be predicted for other instances. Unsupervised learning is useful in cases where the challenge is to discover implicit relationships in an unlabelled dataset (elements are not previously assigned). Reinforcement learning falls between these two extremes: there is some form of feedback available for each step or predictive action, but there is no precise label or error message.
+
+SUPERVISED LEARNING
+
+1. Decision trees: A decision tree is a decision support tool that uses a graph or model similar to a decision tree and its possible consequences, including the results of fortuitous events, resource costs, and utility . They have an appearance like this:
+
+From a business decision-making point of view, a decision tree is the minimum number of yes / no questions that one has to ask, to assess the probability of making a correct decision, most of the time. This method allows you to approach the problem in a structured and systematic way to reach a logical conclusion.
+
+
+Class Session ![Big Data]https://github.com/Camacho18/Big-Data/blob/Unit_2/HomeWorks/1%20arbol.png
+
+2. Naïve Bayes Classification: Naïve Bayes classifiers are a family of simple probabilistic classifiers based on the application of Bayes ‘theorem with strong (Naïve) assumptions of independence between characteristics’. The featured image is the equation - with P (A | B) being posterior probability, P (B | A) being probability, P (A) being class prior probability, and P (B) being prior probability predictor.
+
+
+3. Ordinary Least Squares Regression: If you've been in contact with statistics, you've probably heard of linear regression before. Ordinary Least Squares Regression is a method of performing linear regression. Linear regression can be thought of as the task of fitting a straight line through a set of points. There are several possible strategies for doing this, and the "ordinary least squares" strategy goes like this: you can draw a line and then, for each of the data points, measure the vertical distance between the point and the line and add them together; The fitted line would be the one in which this sum of distances is as small as possible.
+
+Class Session![BigData]https://github.com/Camacho18/Big-Data/blob/Unit_2/HomeWorks/3%20ordinary.png
+
+4. Logistic Regression: Logistic regression is a powerful statistical way to model a binomial result with one or more explanatory variables. Measure the relationship between the categorical dependent variable and one or more independent variables by estimating the probabilities using a logistic function, which is the cumulative logistic distribution.
+
+Class Session ![BigData]https://github.com/Camacho18/Big-Data/blob/Unit_2/HomeWorks/4.png
+
+
+
+5. Support Vector Machines: SVM is a binary classification algorithm. Given a set of points of 2 types at the N-dimensional location, SVM generates a dimensional (N-1) hyperlane to separate those points into 2 groups. Let's say you have some points of 2 types on a piece of paper that are linearly separable. SVM will find a straight line separating those points into 2 types and located as far as possible from all those points.
+
+Class Session![BigData]https://github.com/Camacho18/Big-Data/blob/Unit_2/HomeWorks/5%20support.png
+
+6. Métodos Ensemble: Ensemble methods are learning algorithms that build a set of classifiers and then classify new data points by taking a weighted vote of their predictions. The original set method is Bayesian averaging, but the latest algorithms include encoding output correction error.
+
+UNSUPERVISED LEARNING
+
+ 
+7. Clustering algorithms: Clustering is the task of grouping a set of objects such that the objects in the same group (cluster) are more similar to each other than to those of other groups.
+
+ 
+
+8. Principal Component Analysis: PCA is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables into a set of linearly uncorrelated variable values ​​called principal components.
+
+
+Class Session![BigData]https://github.com/Camacho18/Big-Data/blob/Unit_2/HomeWorks/8%20Analysis.png
+
+Principal component analysis
+
+Some of the PCA applications include compression, data simplification for easier learning, visualization. Keep in mind that domain knowledge is very important when choosing whether to go ahead with PCA or not. Not suitable in cases where the data is noisy (all PCA components have a fairly high variance).
+
+ 
+9. Singular Value Decomposition: In linear algebra, SVD is a factorization of a real complex matrix. For a given M * n matrix, there is a decomposition such that M = UΣV, where U and V are unit matrices and Σ is a diagonal matrix.
+
+Class Session![BigData]https://github.com/Camacho18/Big-Data/blob/Unit_2/HomeWorks/9%20Singular.png
+
+10. Independent Component Analysis: ICA is a statistical technique to reveal the hidden factors underlying sets of variables, measurements or random signals. ICA defines a generative model for the observed multivariate data, which is usually given as a large sample database. In the model, the data variables are assumed to be linear mixtures of some unknown latent variables, and the mixing system is also unknown. Latent variables are assumed to be non-Gaussian and mutually independent, and are called independent components of the observed data.
+
+
+
+https://www.google.com/search?client=ubuntu&channel=fs&q=Main+Types+of+Machine+Learning+Algorithms&ie=utf-8&oe=utf-8
+https://www.raona.com/los-10-algoritmos-esenciales-machine-learning/
+https://www.raona.com/los-10-algoritmos-esenciales-machine-learning/

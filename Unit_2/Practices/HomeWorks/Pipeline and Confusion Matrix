@@ -1,0 +1,71 @@
+Main concepts in Pipelines
+MLlib standardizes APIs for machine learning algorithms to make it easier to combine multiple algorithms into a single pipeline, or workflow. This section covers the key concepts introduced by the Pipelines API, where the pipeline concept is mostly inspired by the scikit-learn project.
+    • DataFrame: This ML API uses DataFrame from Spark SQL as an ML dataset, which can hold a variety of data types. E.g., a DataFrame could have different columns storing text, feature vectors, true labels, and predictions.
+    • Transformer: A Transformer is an algorithm which can transform one DataFrame into another DataFrame. E.g., an ML model is a Transformer which transforms a DataFrame with features into a DataFrame with predictions.
+    • Estimator: An Estimator is an algorithm which can be fit on a DataFrame to produce a Transformer. E.g., a learning algorithm is an Estimator which trains on a DataFrame and produces a model.
+    • Pipeline: A Pipeline chains multiple Transformers and Estimators together to specify an ML workflow.
+    • Parameter: All Transformers and Estimators now share a common API for specifying parameters.
+Pipeline components
+Transformers
+
+A Transformer is an abstraction that includes feature transformers and learned models. Technically, a Transformer implements a method transform(), which converts one DataFrame into another, generally by appending one or more columns. For example:
+
+    A feature transformer might take a DataFrame, read a column (e.g., text), map it into a new column (e.g., feature vectors), and output a new DataFrame with the mapped column appended.
+    A learning model might take a DataFrame, read the column containing feature vectors, predict the label for each feature vector, and output a new DataFrame with predicted labels appended as a column.
+
+Estimators
+
+An Estimator abstracts the concept of a learning algorithm or any algorithm that fits or trains on data. Technically, an Estimator implements a method fit(), which accepts a DataFrame and produces a Model, which is a Transformer. For example, a learning algorithm such as LogisticRegression is an Estimator, and calling fit() trains a LogisticRegressionModel, which is a Model and hence a Transformer.
+Properties of pipeline components
+
+Transformer.transform()s and Estimator.fit()s are both stateless. In the future, stateful algorithms may be supported via alternative concepts.
+
+Each instance of a Transformer or Estimator has a unique ID, which is useful in specifying parameters (discussed below).
+Pipeline
+
+In machine learning, it is common to run a sequence of algorithms to process and learn from data. E.g., a simple text document processing workflow might include several stages:
+
+    1.     Split each document’s text into words.
+    2.     Convert each document’s words into a numerical feature vector.
+    3.     Learn a prediction model using the feature vectors and labels.
+       
+MLlib represents such a workflow as a Pipeline, which consists of a sequence of PipelineStages (Transformers and Estimators) to be run in a specific order. We will use this simple workflow as a running example in this section.
+How it works
+
+A Pipeline is specified as a sequence of stages, and each stage is either a Transformer or an Estimator. These stages are run in order, and the input DataFrame is transformed as it passes through each stage. For Transformer stages, the transform() method is called on the DataFrame. For Estimator stages, the fit() method is called to produce a Transformer (which becomes part of the PipelineModel, or fitted Pipeline), and that Transformer’s transform() method is called on the DataFrame.
+
+We illustrate this for the simple text document workflow. The figure below is for the training time usage of a Pipeline.
+
+
+
+
+
+
+
+
+
+
+
+Above, the top row represents a Pipeline with three stages. The first two (Tokenizer and HashingTF) are Transformers (blue), and the third (LogisticRegression) is an Estimator (red). The bottom row represents data flowing through the pipeline, where cylinders indicate DataFrames. The Pipeline.fit() method is called on the original DataFrame, which has raw text documents and labels. The Tokenizer.transform() method splits the raw text documents into words, adding a new column with words to the DataFrame. The HashingTF.transform() method converts the words column into feature vectors, adding a new column with those vectors to the DataFrame. Now, since LogisticRegression is an Estimator, the Pipeline first calls LogisticRegression.fit() to produce a LogisticRegressionModel. If the Pipeline had more Estimators, it would call the LogisticRegressionModel’s transform() method on the DataFrame before passing the DataFrame to the next stage.
+
+A Pipeline is an Estimator. Thus, after a Pipeline’s fit() method runs, it produces a PipelineModel, which is a Transformer. This PipelineModel is used at test time; the figure below illustrates this usage.
+
+CONFUSION MATRIX
+after data cleaning, pre-processing and wrangling, the first step we do is to feed it to an outstanding model and of course, get output in probabilities. But hold on! How in the hell can we measure the effectiveness of our model. Better the effectiveness, better the performance and that’s exactly what we want. And it is where the Confusion matrix comes into the limelight. Confusion Matrix is a performance measurement for machine learning classification.
+
+Well, it is a performance measurement for machine learning classification problem where output can be two or more classes. It is a table with 4 different combinations of predicted and actual values.
+
+
+It is extremely useful for measuring Recall, Precision, Specificity, Accuracy and most importantly AUC-ROC Curve.
+The confusion matrix of a class problem is an nx matrix in which the rows are named according to the real classes and the columns, according to the classes stopped by the model. It is used to explicitly show when one class is confused with another. Therefore, it allows working separately with different types of errors.
+
+For example, in a binary model that seeks to predict whether a mushroom is poisonous or not, specify in the precision physical characteristics considered the real classes p (ositive = the mushroom is poisonous) and n (egative = the mushroom is edible), and the classes predicted by the model, S (í, is poisonous), or N (o, is edible). In this way, the confusion matrix for this model has its rows labeled with the real classes, and its columns with those predicted by the model. It would look like this:
+
+
+
+
+In this way, the main diagonal contains the sum of all the correct predictions (the model says "S" and it is correct, it is poisonous, or it says "N" and it is correct, it is edible). The other diagonal reflects classifier errors: false positives or “true positives” (says that it is poisonous “S”, but in reality it is not “n”), or false negatives or “false negatives” (says that it is edible "N", but actually poisonous "p").
+ 
+However, when the different “classes” are very unbalanced, this way of classifying the “goodness” of the operation of a classifier is of little use. For example, if the churn rate is 10% per month (that is, 10 people out of 100 unsubscribe per month), and we consider the customer who unsubscribes as a class "Positive", the expected positive: negative ratio would be 1: 9. So if we directly assigned all the clients the negative class (= no churn), we would be achieving a base precision of 90%, but… it would be useless.
+
+https://spark.apache.org/docs/latest/ml-pipeline.html
